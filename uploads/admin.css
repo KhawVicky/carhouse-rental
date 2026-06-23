@@ -1,0 +1,504 @@
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+
+:root{
+    --left-bg-color:rgba(45, 44, 59, 0.7);
+    --right-bg-color:rgba(43,43,43,0.8);
+    --left-btn-hover-color:rgba(87,84,236,1);
+    --right-btn-hover-color:rgb(116, 194, 216);
+    --hover-width:60%;
+    --other-width:40%;
+    --speed:1500ms;
+}
+body{
+    width: 100%;
+    background-color: #EFEFEF;
+    overflow-x:hidden;
+    display: flex;
+    flex-direction: column;   
+}
+.containerMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: -10px;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    background-color:#cbfdf7 ;
+}
+.title{
+    margin-left: 120px;
+    height: 60px;
+    width: 550px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+.RentHub{
+    position: relative;
+    height: 60px;
+    width: 250px;
+    cursor: pointer;
+}
+.RentHub img{
+    height: 60px;
+    width: 270px;
+}
+.ContainerMenubar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 450px;
+    margin-left: 20px;
+}
+#menu,#menuH{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Franklin Gothic";
+    color: #252525;
+}
+#menu:hover{
+    color: #787878ca;
+    transform: scale(0.98);
+    transition: 0.8s;
+}
+.ContainerSearch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 8vh;
+    margin-right: 10px;
+}
+
+
+.navSearch{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: right;
+    margin-right: 140px;
+    width: 40vw
+}
+
+#signin{
+    margin-right: 10px;
+    font-family: "Franklin Gothic Medium";
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+#buUser{
+    margin-right: 20px;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: default;
+    background-color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.hoverMenu{
+    position: absolute;
+    right: 13%;
+    top: 7%;
+    z-index: 1000;
+    max-width: 130px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 6px 12px #00000056;
+    padding: 10px;
+    display: none;
+}
+.vertical-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.vertical-menu li {
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: center;
+    font-size: 22px;
+}
+
+.vertical-menu li:last-child {
+    border-bottom: none;
+}
+
+.vertical-menu li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.vertical-menu li :hover {
+    background-color: #e5e5e5;
+}
+
+#icon::before {
+    content: '\f2bb'; /* Replace with the Unicode value of your desired icon */
+    font-family: 'Font Awesome 6 Free';
+    font-size: 18px;
+    margin: 5px;
+}
+#icon3::before {
+    content: '\f4ad'; /* Replace with the Unicode value of your desired icon */
+    font-family: 'Font Awesome 6 Free';
+    font-size: 22px;
+    margin: 5px;
+}
+#profile{
+    margin-right: 20px;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor:pointer;
+    color:black;
+}
+#profile:hover{
+    box-shadow: 0px 6px 12px #00000056;
+}
+/*********************************************************/
+.ContainerCategory{
+    display: flex;
+    height: 50px;
+    margin-left: -10px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #b9b5b531;
+    justify-content: center;
+    align-items: center;
+}
+.ContainerCategory .Console{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%
+}
+.Console a{
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Franklin Gothic Medium";
+    font-size: 24px;
+}
+.active-link {
+    border-bottom: 2px solid #252525; /* Add your desired border styles */
+  }
+  
+/**********Verify Post*********************/
+.MainPostContainer{
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Franklin Gothic Medium";
+    background-color: #EFEFEF;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.Category:checked + label {
+    background-color:#b4b0b0;
+}
+.TitleAd{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.CarHouse{
+    display: flex;
+    margin-left: 20px;
+}
+.CarHouse input[type="radio"] {
+    display: none;
+
+}
+.CarHouse label{
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    text-align: center;
+    cursor: pointer;
+}
+.DisplayCarContainer{
+    width: 70%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.carContainer{
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.containerPhoto{
+    width: 150px;
+    height: 150px;
+    margin-right:20px;
+}
+.containerPhoto img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+.otherDetails{
+    width: 60%;
+    height: 150px;
+    margin-right:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.datesContainer{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#tittle{
+    text-decoration: none;
+    color: #252525;
+
+}
+.datesContainer i{
+    font-size: 20px;
+    margin-right: 20px;
+}
+.time{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    color: #565555c1;
+    cursor: default;
+}
+.datesContainer p{
+     margin: 0;
+}
+.page {
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page a {
+    background-color: #d2d2d2;
+    color: #000000;
+    width: 30px;
+    margin-right: 10px; /* 添加间距 */
+    text-decoration: none;
+    border-radius: 3px;
+}
+#EditPost{
+    border-style: none;
+    font-family: "Franklin Gothic Medium";
+    background-color: #F8D937;
+    width: 92px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #b9b8b8;
+    text-align: left;
+    
+}
+
+th {
+    background-color: #dcdada;
+    height: 50px;
+}
+td:first-child img {
+    width: 100%; /* Set the width as per your requirement */
+    height: 150px; /* Retain aspect ratio */
+    object-fit: cover;
+}
+.align{
+    text-align: center;
+}
+.statusRow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btnPost{
+    border-style: none;
+    font-family: "Franklin Gothic Medium";
+    background-color: #F8D937;
+    width: 80%;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+#Available{
+    background-color: #00800094;
+}
+#Delete{
+    background-color: red;
+}
+.btnPost:hover{
+    transform: scale(0.98);
+}
+
+.Deletecontainer{
+    position: fixed;
+    background-color: #EFEFEF;
+    z-index: 999;
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.consoles{
+    display: flex;
+    width: 80%;
+}
+.btnPostDelete{
+   
+    border-style: none;
+    font-family: "Franklin Gothic Medium";
+    background-color: #F8D937;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+/***********Feedback***********/
+.reportContainers{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+  
+}
+.reportContainers #report{
+    border: none;
+    margin-left: 15px;
+}
+.BackContainer{
+    display: none;
+}
+
+.RejectContainer{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #54535329;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+
+}
+.ContainerR{
+    position: fixed;
+    z-index: 999;
+    height: 200px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFEFEF;
+    border: 1.5px solid #252525;
+    border-radius: 4px;
+
+}
+select{
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+    font-family:'Franklin Gothic';
+    font-size: 18px;
+}
+.error{
+    color:red; 
+    font-family:'Franklin Gothic';
+    max-height:25px ;
+    width: 60%;
+    text-align: left;
+}
+textarea{
+    width: 90%;
+    min-height: 1em; /* Set a minimum height to avoid collapse */
+    resize: none;
+    color: #000000;
+    font-family: "Franklin Gothic";
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    
+}
+.reply{
+    margin: 10px;
+    border: 1px solid #b4b0b0;
+    border-radius: 5px;
+    overflow: visible;
+}

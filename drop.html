@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="Picture/logo7.svg" />
+    <title>Rent House</title>
+  </head>
+  <body class="text-dark">
+    <p class="d-inline-flex gap-1">
+      <button class="btn btn-primary" id="toggleFirst">Toggle first element</button>
+      <button class="btn btn-primary" id="toggleSecond">Toggle second element</button>
+    </p>
+    <div class="row">
+      <div class="col-6">
+        <div class="collapse" id="multiCollapseExample1">
+          <div class="card card-body">
+            Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+          </div>
+        </div>
+     
+        <div class="collapse" id="multiCollapseExample2">
+          <div class="card card-body">
+            Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="first-tab" data-bs-toggle="tab" data-bs-target="#first" type="button" role="tab" aria-controls="first" aria-selected="true">First</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="second-tab" data-bs-toggle="tab" data-bs-target="#second" type="button" role="tab" aria-controls="second" aria-selected="false">Second</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+        <div class="card card-body">
+          Some placeholder content for the first tab component. This panel is hidden by default but revealed when the user activates the relevant tab.
+        </div>
+      </div>
+      
+      <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+        <div class="card card-body">
+          Some placeholder content for the second tab component. This panel is hidden by default but revealed when the user activates the relevant tab.
+        </div>
+      </div>
+    </div>
+    
+</body>
+<script src="js/replaceme.min.js"></script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#toggleFirst').click(function() {
+      $('#multiCollapseExample2').collapse('hide');
+      $('#multiCollapseExample1').collapse('toggle');
+    });
+
+    $('#toggleSecond').click(function() {
+      $('#multiCollapseExample1').collapse('hide');
+      $('#multiCollapseExample2').collapse('toggle');
+    });
+  });
+</script>
+</body>
+</html>

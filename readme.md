@@ -160,15 +160,10 @@ The project is structured as a traditional PHP web application:
 * Sass
 * JavaScript
 * jQuery
-* Font Awesome
-* Slick Carousel
-* Lightbox
 
 ### Backend
 
 * PHP
-* PDO
-* Native PHP sessions
 * PHP mail function
 
 ### Database
@@ -179,90 +174,9 @@ The project is structured as a traditional PHP web application:
 ### Development tools
 
 * XAMPP
-* Apache
 * MySQL
 * npm
-* Git
 * GitHub
-
-## Local development setup
-
-### Prerequisites
-
-Install the following tools:
-
-* XAMPP with Apache and MySQL
-* PHP through XAMPP
-* Node.js and npm
-* Git
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/KhawVicky/carhouse-rental.git
-```
-
-Copy or keep the project inside your XAMPP `htdocs` directory:
-
-```text
-C:\xampp\htdocs\CNH-2
-```
-
-### 2. Install frontend dependencies
-
-```bash
-npm install
-```
-
-### 3. Build CSS from Sass
-
-```bash
-npm run sass:build
-```
-
-For active Sass development, run:
-
-```bash
-npm run sass:watch
-```
-
-### 4. Create the database
-
-Create a MySQL database named:
-
-```text
-renthub
-```
-
-The database connection is configured in:
-
-```text
-connection.php
-```
-
-Default local connection:
-
-```text
-Host: localhost
-Database: renthub
-Username: root
-Password: empty
-```
-
-### 5. Start XAMPP
-
-Start:
-
-* Apache
-* MySQL
-
-### 6. Open the project
-
-Open the website in a browser:
-
-```text
-http://localhost/CNH-2/home.php
-```
 
 ## Main files
 
@@ -304,7 +218,6 @@ http://localhost/CNH-2/home.php
 | Profile editing               | Implemented |
 | Feedback page                 | Implemented |
 | Sass and Bootstrap workflow   | Implemented |
-| Production security hardening | Not started |
 
 ## Current scope
 
@@ -318,27 +231,6 @@ The current system focuses on:
 * User account pages
 * Favourite listings
 * Local XAMPP deployment
-
-## Limitations
-
-* The project is designed for local XAMPP development.
-* A database export file is not currently included in the project folder.
-* Passwords are handled in the project code for academic/demo use and should be improved before production use.
-* The email verification flow depends on local PHP mail configuration.
-* Uploaded files are stored directly in the project `uploads/` directory.
-* Additional server-side validation and authorization should be added before real public deployment.
-
-## Future improvements
-
-* Add a complete database schema export
-* Hash user passwords securely
-* Add stronger server-side validation
-* Improve upload file naming and file type checks
-* Add admin approval tools for rental advertisements
-* Add booking request workflow
-* Add owner and renter messaging
-* Add responsive UI refinements
-* Add deployment configuration for a live server
 
 ## Project information
 
